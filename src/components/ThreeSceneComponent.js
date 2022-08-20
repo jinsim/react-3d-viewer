@@ -57,7 +57,7 @@ class ThreeSceneComponent extends Component {
         // load a resource
         loader.load(
             // resource URL
-            'assets/owl_1000.obj',
+            this.props.obj,
             ( object ) => {
                 console.log(this.scene)
 

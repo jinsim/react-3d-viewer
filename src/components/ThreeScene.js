@@ -11,7 +11,7 @@ class ThreeScene extends Component {
                 <button onClick={() => this.setState(state => ({isMounted: !state.isMounted}))}>
                     {isMounted ? "Unmount" : "Mount"}
                 </button>
-                {isMounted && <ThreeSceneComponent onProgress={loadingPercentage => this.setState({ loadingPercentage })} />}
+                {isMounted && <ThreeSceneComponent obj={this.props.obj} onProgress={loadingPercentage => this.setState({ loadingPercentage })} />}
                 {isMounted && loadingPercentage === 100 && <div>Scroll to zoom, drag to rotate</div>}
                 {isMounted && loadingPercentage !== 100 && <div>Loading Model: {loadingPercentage}%</div>}
             </>
