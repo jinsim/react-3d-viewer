@@ -12,7 +12,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/3d" exact element={<ThreeScene obj='Model3D/owl_1000.obj'/>} /> 
+          {/* <Route path="/3d" exact element={<ThreeScene obj='Model3D/owl_1000.obj'/>} />  */}
           <Route path="/" exact element={<Main />} /> 
         </Routes>
       </BrowserRouter>
