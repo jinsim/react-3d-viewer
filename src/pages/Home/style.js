@@ -47,6 +47,7 @@ export const KUMKS = styled.div `
         width: 100%;
         height: 90px;
         text-align: center;
+        color: #1976d2;
     }
     .trigger {
         width: 100%;

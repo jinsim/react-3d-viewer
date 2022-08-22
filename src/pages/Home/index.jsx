@@ -11,8 +11,14 @@ function Home() {
             </S.Introduction>
             {/* <S.ScrollContainer> */}
                 <S.KUMKS>
-                    <div className='animate'>KU Makerspace</div>
-                    <div className='trigger'></div>
+                    <div className='animate animate_1'>KU Makerspace</div>
+                    <div className='trigger trigger_1'></div>
+                    <p className='animate animate_2'>내가 원하는 물건을 직접 설계하고 제작해볼 수 있는 공간.</p>
+                    <div className='trigger trigger_2'></div>
+                    <p className='animate animate_3'>3D프린터, 레이저커터, 티셔츠 프린터기, 프로그램 자수기, CNC, 목공실 등 다양한 최신 제작툴을 구비한 곳.</p>
+                    <div className='trigger trigger_3'></div>
+                    <div className='animate animate_4'>Why 3D Model?</div>
+                    <div className='trigger trigger_4'></div>
                 </S.KUMKS>
             {/* </S.ScrollContainer> */}
             {/* <S.ThreeDModel>
