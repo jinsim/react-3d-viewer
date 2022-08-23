@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import ViewInArIcon from '@mui/icons-material/ViewInAr';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 const pages = ['About Us', '3D Projects', 'Upload', 'KUMKS'];
@@ -26,7 +27,7 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar>
+    <AppBar position="static">
       <Container maxWidth="xl">
 
         <Toolbar disableGutters>
@@ -108,7 +109,43 @@ const NavBar = () => {
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+          <Link to='/about-us' style={{textDecoration: 'none'}}>
+            <Button
+              key={pages[0]}
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'white', display: 'block', padding: '6px 15px', textDecoration: 'none' }}
+            >
+              About Us
+            </Button>
+          </Link>
+          <Link to='/three-d-projects' style={{textDecoration: 'none'}} >
+            <Button
+              key={pages[1]}
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'white', display: 'block', padding: '6px 15px' }}
+            >
+              3D Projects
+            </Button>
+          </Link>
+          <Link to='/upload' style={{textDecoration: 'none'}}>
+            <Button
+              key={pages[2]}
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'white', display: 'block', padding: '6px 15px' }}
+            >
+              Upload
+            </Button>
+          </Link>
+          <Link to='/kumks' style={{textDecoration: 'none'}}>
+            <Button
+              key={pages[3]}
+              onClick={"/kumks"}
+              sx={{ my: 2, color: 'white', display: 'block', padding: '6px 15px' }}
+            >
+              KUMKS
+            </Button>
+          </Link>
+            {/* {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -116,7 +153,7 @@ const NavBar = () => {
               >
                 {page}
               </Button>
-            ))}
+            ))} */}
           </Box>
 
         </Toolbar>
