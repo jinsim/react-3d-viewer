@@ -10,10 +10,10 @@ function Upload() {
                     <ViewInArIcon />
                     &nbsp; 3D 프로젝트 업로드하기
                 </S.ImageLabel>
-                <S.ImageInput
+                {/* <S.ImageInput
                 type="file"
                 id="upload-image"
-                />
+                /> */}
                 <S.ImgText>
                     <p>Coming Soon</p>
                 </S.ImgText>

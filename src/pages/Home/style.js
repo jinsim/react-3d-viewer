@@ -5,6 +5,8 @@ export const Introduction = styled.div `
     height: 700px;
     display: flex;
     flex-direction: column;
+    background-image: url('./img/home1.jpeg');
+    background-size: cover;
     animation-fill-mode: both;
     animation-duration: 1000ms;
     animation-delay: 0ms;
@@ -17,23 +19,25 @@ export const Introduction = styled.div `
     }
 `;
 export const Title = styled.div `
-    font-size: 50px;
+    font-size: 60px;
     color: #1976d2;
     margin: auto auto 0 auto;
     font-family: monospace;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: .3rem;
-    text-shadow: grey 2px 2px 2px;
+    text-shadow: white 2px 2px 2px;
 `;
 export const TextOne = styled.div `
     font-size: 20px;
     margin: 30px auto 0px auto;
     font-family: monospace;
+    color: white;
 `;
 export const TextTwo = styled.div `
     font-size: 20px;
     margin: 10px auto auto auto;
     font-family: monospace;
+    color: white;
 `;
 export const ScrollContainer = styled.div `
 `;

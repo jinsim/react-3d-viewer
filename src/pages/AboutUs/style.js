@@ -1,15 +1,24 @@
 import styled from 'styled-components';
 
+export const TeamImg = styled.img `
+    width: 80vw;
+    height: 300px;
+    display: flex;
+    margin: auto;
+    object-fit: cover;
+    content: url('./img/aboutUs.jpeg');
+`;
 export const TeamIntroduction = styled.div `
     height: 400px;
-    padding: 100px 50px 0 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 0 50px 0 50px;
 `;
 export const TeamVision = styled.div `
-    height: 400px;
-    padding: 100px 50px 0 50px;
+    height: 250px;
+    padding: 50px 50px 0 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,17 +30,17 @@ export const TeamMembers = styled.div `
     align-items: stretch;
 `;
 export const Title = styled.div `
-    font-size: 50px;
+    font-size: 35px;
     font-family: monospace;
     font-weight: 700;
-    letter-spacing: .3rem;
+    letter-spacing: .1rem;
     color: #1976d2;
+    margin-bottom: 40px;
 `;
 export const Text = styled.div `
-    font-size: 14px;
-    font-family: monospace;
-    font-weight: 700;
-    letter-spacing: .3rem;
+    font-size: 18px;
+    text-indent: 15px;
+    max-width: 1000px;
 `;
 
 export const AboutWrapper = styled.div `
@@ -67,7 +76,7 @@ export const TeamWrapper = styled.div `
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 50px;
 `;
 
