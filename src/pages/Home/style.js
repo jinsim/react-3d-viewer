@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Introduction = styled.div `
     width: 100vw;
-    height: 700px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     background-image: url('./img/home1.jpeg');
@@ -46,12 +46,20 @@ export const KUMKS = styled.div `
     .animate {
         position: sticky;
         top: 45vh;
-        opacity: 0.5;
+        opacity: 1;
         font-size: 40px;
         width: 100%;
         height: 90px;
         text-align: center;
         color: #1976d2;
+    }
+    .animate a {
+        color: #2291FF;
+        text-decoration: none;
+    }
+
+    .animate a:hover {
+        text-decoration: underline;
     }
     .trigger {
         width: 100%;
