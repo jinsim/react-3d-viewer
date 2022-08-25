@@ -44,5 +44,6 @@ export const ImgText = styled.div `
     justify-content: center;
     top: 35vh;
     font-size: 60px;
-    display: none;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
 `;

@@ -68,6 +68,9 @@ export const LeftContainer = styled.div `
     display: flex;
     align-items: center;
     justify-content: center;
+    img {
+        content: url('./img/kumks1.jpeg');
+    }
     :hover {
         img {
             opacity: 0.7;
@@ -80,6 +83,9 @@ export const RightContainer = styled.div `
     display: flex;
     align-items: center;
     justify-content: center;
+    img {
+        content: url('./img/kumks2.jpeg');
+    }
     :hover {
         img {
             opacity: 0.7;

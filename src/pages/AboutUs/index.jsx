@@ -1,28 +1,37 @@
 import React from 'react';
 import * as S from './style';
+import useScrollFadeIn from '../../hooks/useScrollFadeIn'
 
 function AboutUs() {
+    const scrollFadeIn1 = useScrollFadeIn();
+    const scrollFadeIn2 = useScrollFadeIn();
+    const scrollFadeIn3 = useScrollFadeIn();
+    const scrollFadeIn4 = useScrollFadeIn();
+    const scrollFadeIn5 = useScrollFadeIn();
     return (
         <>
-            <S.TeamIntroduction>
+            <S.TeamImg></S.TeamImg>
+            <S.TeamIntroduction {...scrollFadeIn1}>
                 <S.Title>Who are we?</S.Title>
-                <S.Text>AI Computer Vision, 그리고 Web에서의 3D 모델 시각화에 관심이 있는 고려대학교 학부생들이 한 팀으로 모였습니다.</S.Text>
-                <S.Text>팀장이 KU메이커스페이스에서 매니저 활동을 한 경험을 살려 본 프로젝트 진행을 리드하였습니다. AI의 경우 평상시 AI Computer Vision을 공부한 것을 바탕으로 3D 모델을 제작하기 위한 딥러닝 NeRF 모델을 개발하였습니다. Web 개발은 '멋쟁이사자처럼 고려대학교' 학회 출신들이 진행하였습니다.</S.Text>
-                <S.Text>우리의 비전은 '창의적인 아이디어를 가지고 있는 메이커들을 지원하여 참가 팀들의 아이디어 검증 및 경쟁력을 상승시키는 것'입니다. 이를 위해, 메이커 작품의 3D 모델 구현, 메이커 작품 아카이브 기능, 교내 메이커 활동 지원 프로그램 홍보를 넘어 다양한 방안들을 모색하고자 합니다.</S.Text>
+                <S.Text>
+                    AI Computer Vision, 그리고 Web에서의 3D 모델 시각화에 관심이 있는 고려대학교 학부생들이 한 팀으로 모였습니다.
+                    <br/>&nbsp;&nbsp; 팀장이 KU메이커스페이스에서 매니저 활동을 한 경험을 살려 본 프로젝트 진행을 리드하였습니다. AI의 경우 평상시 AI Computer Vision을 공부한 것을 바탕으로 3D 모델을 제작하기 위한 딥러닝 NeRF 모델을 개발하였습니다. Web 개발은 '멋쟁이사자처럼 고려대학교' 학회 출신들이 진행하였습니다.
+                    <br/>&nbsp;&nbsp; 우리의 비전은 '창의적인 아이디어를 가지고 있는 메이커들을 지원하여 참가 팀들의 아이디어 검증 및 경쟁력을 상승시키는 것'입니다. 이를 위해, 메이커 작품의 3D 모델 구현, 메이커 작품 아카이브 기능, 교내 메이커 활동 지원 프로그램 홍보를 넘어 다양한 방안들을 모색하고자 합니다.
+                </S.Text>
             </S.TeamIntroduction>
-            <S.TeamVision>
+            <S.TeamVision {...scrollFadeIn2}>
                 <S.Title>What is our vision?</S.Title>
                 <S.Text>우리의 비전은 '창의적인 아이디어를 가지고 있는 메이커들을 지원하여 참가 팀들의 아이디어 검증 및 경쟁력을 상승시키는 것'입니다. 이를 위해, 메이커 작품의 3D 모델 구현, 메이커 작품 아카이브 기능, 교내 메이커 활동 지원 프로그램 홍보를 넘어 다양한 방안들을 모색하고자 합니다.</S.Text>
             </S.TeamVision>
             <S.TeamMembers>
-                <S.AboutWrapper>
+                <S.AboutWrapper {...scrollFadeIn3}>
                     <S.AboutContent>
                         Members
                     </S.AboutContent>
                     <S.Line></S.Line>
                 </S.AboutWrapper>
-                <S.TeamWrapper>
-                    <S.TeamMember>
+                <S.TeamWrapper {...scrollFadeIn4}>
+                    <S.TeamMember style={{ marginRight: '10vw' }}>
                         <S.MemberProfile>
                             <S.ProfileImageOne></S.ProfileImageOne>
                         </S.MemberProfile>
@@ -57,8 +66,8 @@ function AboutUs() {
                         <S.IntroText>세상에 이름을 남기고 싶은 개발자입니다."</S.IntroText>
                     </S.TeamMember>
                 </S.TeamWrapper>
-                <S.TeamWrapper>
-                    <S.TeamMember>
+                <S.TeamWrapper {...scrollFadeIn5}>
+                    <S.TeamMember style={{ marginRight: '10vw' }}>
                         <S.MemberProfile>
                             <S.ProfileImageThree></S.ProfileImageThree>
                         </S.MemberProfile>
@@ -72,8 +81,8 @@ function AboutUs() {
                         <S.MemberIntro>▪ 고려대학교 수강신청 알리미 팀장</S.MemberIntro>
                         <S.MemberIntro>▪ 고려대학교 SW 교육봉사단</S.MemberIntro>
                         <S.IntroBreak></S.IntroBreak>
-                        <S.IntroText>"지식을 기반으로 경험을 쌓고,</S.IntroText>
-                        <S.IntroText>경험을 바탕으로 실용적인 SW를 개발하고 싶은 개발자입니다."</S.IntroText>
+                        <S.IntroText>"지식을 기반으로 경험을 쌓고, 경험을 바탕으로</S.IntroText>
+                        <S.IntroText>실용적인 SW를 개발하고 싶은 개발자입니다."</S.IntroText>
                     </S.TeamMember>
                     <S.TeamMember>
                         <S.MemberProfile>
