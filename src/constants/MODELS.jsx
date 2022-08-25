@@ -1,4 +1,4 @@
-const Models = [
+export const Models = [
     {
         'name': 'owl',
         'objPos': [0,0,0],
@@ -31,7 +31,7 @@ const Models = [
     },
 ]
 
-const DetailInfo = {
+export const DetailInfo = {
     'owl':{
         'title' : '부엉이',
         'description' : `부엉이를 형상화하여 제작되었습니다.
