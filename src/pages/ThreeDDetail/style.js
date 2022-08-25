@@ -25,7 +25,7 @@ export const ProjectContainer = styled.div `
     justify-content: space-around;
 `;
 export const ThreeDBox = styled.div `
-    width: 450px;
+    width: 500px;
     height: 500px;
     border: 2px solid #1976d2;
     img {
