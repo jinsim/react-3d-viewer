@@ -37,7 +37,7 @@ class ThreeSceneComponent extends Component {
             0.1, // near plane
             1000 // far plane
         );
-        this.camera.position.z = 2; // is used here to set some distance from a cube that is located at z = 0
+        this.camera.position.set(...this.props.camPos); // is used here to set some distance from a cube that is located at z = 0
         // OrbitControls allow a camera to orbit around the object
         // https://threejs.org/docs/#examples/controls/OrbitControls
         this.controls = new OrbitControls( this.camera, this.mount );
@@ -57,7 +57,7 @@ class ThreeSceneComponent extends Component {
         // load a resource
         loader.load(
             // resource URL
-            this.props.obj,
+            this.props.objSrc,
             ( object ) => {
                 console.log(this.scene)
 
@@ -67,6 +67,7 @@ class ThreeSceneComponent extends Component {
                 const el = this.scene.children[3].children[0]
 
                 this.model = el;
+                object.position.set(...this.props.objPos);
             },
             // called when loading is in progresses
             ( xhr ) => {
@@ -106,7 +107,7 @@ class ThreeSceneComponent extends Component {
 
     startAnimationLoop = () => {
         // slowly rotate an object
-        if (this.model) this.model.rotation.y += 0.005;
+        // if (this.model) this.model.rotation.y += 0.005;
 
         this.renderer.render( this.scene, this.camera );
 
