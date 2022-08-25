@@ -20,12 +20,12 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/3d" exact element={<ThreeScene obj='Model3D/owl_1000.obj'/>} /> 
-          <Route path="/" exact element={<Home />} />
           <Route path="/about-us" exact element={<AboutUs />} />
+          <Route path="/three-d-projects/:objId" exact element={<ThreeDDetail />} />
           <Route path="/three-d-projects" exact element={<ThreeDProjects />} />
-          <Route path="/three-d-projects/detail" exact element={<ThreeDDetail />} />
           <Route path="/upload" exact element={<Upload />} />
           <Route path="/kumks" exact element={<Kumks />} />
+          <Route path="/" exact element={<Home />} />
         </Routes>
       </BrowserRouter>
     </>

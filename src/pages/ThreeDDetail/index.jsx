@@ -1,14 +1,17 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import * as S from './style';
 
-function ThreeDDetail() {
+function ThreeDDetail({match} ) {
+    const { objId } = useParams();
     const navigate = useNavigate();
     const project = {
         img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
         title: 'Burger',
     };
+    console.log("detail page", objId);
     return (
         <>
             <S.TopContainer>

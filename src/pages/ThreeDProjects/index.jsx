@@ -1,23 +1,27 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import { Link } from 'react-router-dom';
 
 export default function ThreeDProjects() {
+
     return (
         <ImageList
         // sx={{ width: 500, height: 450 }}
         sx={{ padding: '10px' }}
         cols={3}
         >
-            {itemData.map((item) => (
-                <ImageListItem sx={{ height: 'initial' }} key={item.img}>
-                <img
-                    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                    alt={item.title}
-                    loading="lazy"
-                />
-                </ImageListItem>
+            {itemData.map((item, key) => (
+                <Link to={`/three-d-projects/${key}`}>
+                    <ImageListItem sx={{ height: 'initial' }} key={item.img}>
+                    <img
+                        src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                        srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                        alt={item.title}
+                        loading="lazy"
+                    />
+                    </ImageListItem>
+                </Link>
             ))}
         </ImageList>
     );
