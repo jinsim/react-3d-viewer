@@ -27,7 +27,7 @@ function ThreeDDetail({match} ) {
             </S.TopContainer>
             <S.ProjectContainer>
                 <S.ThreeDBox>
-                    <ThreeScene objSrc='https://2022-koreauniv-dataton.s3.ap-northeast-2.amazonaws.com/3d-Model/eevee.obj' objPos={[0, 0, 0]} camPos={[0,0,2]}/>
+                    <ThreeScene objSrc={`https://2022-koreauniv-dataton.s3.ap-northeast-2.amazonaws.com/3d-Model/${obj.name}.obj`} objPos={obj.objPos} camPos={obj.camPos}/>
                 </S.ThreeDBox>
                 <S.InfoBox>
                     <S.ProjectInfo>
