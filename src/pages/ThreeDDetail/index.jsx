@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ThreeScene from '../../components/ThreeScene';
 import * as S from './style';
 import {Models, DetailInfo} from '../../constants/MODELS.jsx'
 
@@ -26,7 +27,7 @@ function ThreeDDetail({match} ) {
             </S.TopContainer>
             <S.ProjectContainer>
                 <S.ThreeDBox>
-                    <img src={`https://2022-koreauniv-dataton.s3.ap-northeast-2.amazonaws.com/3d-Model/${obj.name}.png`} alt="3d model"/>
+                    <ThreeScene objSrc='https://2022-koreauniv-dataton.s3.ap-northeast-2.amazonaws.com/3d-Model/eevee.obj' objPos={[0, 0, 0]} camPos={[0,0,2]}/>
                 </S.ThreeDBox>
                 <S.InfoBox>
                     <S.ProjectInfo>
@@ -46,7 +47,7 @@ function ThreeDDetail({match} ) {
                     </S.ProjectInfo>
                     <S.MakerInfo>
                         <S.Title>Maker Info.</S.Title>
-                        <pre>학번 : {objInfo.makerName}</pre>
+                        <pre>이름 : {objInfo.makerName}</pre>
                         <pre>나이 : {objInfo.makerAge}</pre>
                         <pre>소속 : {objInfo.makerMajor}</pre>
                     </S.MakerInfo>

@@ -68,6 +68,7 @@ class ThreeSceneComponent extends Component {
 
                 this.model = el;
                 object.position.set(...this.props.objPos);
+                this.props.isLoaded();
             },
             // called when loading is in progresses
             ( xhr ) => {
@@ -107,7 +108,7 @@ class ThreeSceneComponent extends Component {
 
     startAnimationLoop = () => {
         // slowly rotate an object
-        // if (this.model) this.model.rotation.y += 0.005;
+        if (this.model) this.model.rotation.y += 0.005;
 
         this.renderer.render( this.scene, this.camera );
 
