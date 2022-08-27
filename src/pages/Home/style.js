@@ -85,7 +85,7 @@ export const DivTwo = styled.div `
 export const BottomWrapper = styled.div `
     width: 100%;
     height: 250px;
-    background-color: #d9d9dd;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,6 +96,7 @@ export const CompanyName = styled.div `
     font-size: 30px;
     font-weight: 900;
     margin-bottom: 15px;
+    color: #1976d2;
 `;
 
 export const BottomMenu = styled.div `

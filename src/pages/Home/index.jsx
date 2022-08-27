@@ -20,7 +20,7 @@ function Home() {
     }, options);
     useEffect(() => {
         boxList.forEach(el => observer.observe(el));
-    })
+    }, 3)
     // 반복문을 돌려 모든 DOM에 적용
     boxList.forEach(el => observer.observe(el));
     return (
@@ -38,11 +38,11 @@ function Home() {
                     <div className="box">📇 3D 프린터</div>
                     <div className="box">✂️ 레이저커터</div>
                     <div className="box">🖨 티셔츠 프린터기</div>
-                    <div className="box">🎐 프로그램 자수기</div>
+                    <div className="box">🧷 프로그램 자수기</div>
                     <div className="box">🎛 CNC</div>
                     <div className="box">🪚 목공실 등</div>
                     <div className="box">💡 다양한 최신 제작툴을 구비한 곳.</div>
-                    <div onClick={(e) => window.open("https://kums.korea.ac.kr/")} className="box click"><span><b>KU</b>&nbsp;Makerspace 바로 가기 ➪</span></div>
+                    <div className="box click"><span onClick={(e) => window.open("https://kums.korea.ac.kr/")}><b>KU</b>&nbsp;Makerspace 바로 가기 ➪</span></div>
                 </div>
             </section>
             <section className="black-bg diff-desc-image-wrap">
@@ -67,7 +67,7 @@ function Home() {
             <S.BottomWrapper>
                 <S.CompanyName>Neural Rendering</S.CompanyName>
                 <S.BottomMenu>
-                    E-mail: neuralrendering@gmail.com
+                    ✉️ neuralrendering@gmail.com
                 </S.BottomMenu>
             </S.BottomWrapper>
         </>
