@@ -34,22 +34,24 @@ function ThreeDDetail({match} ) {
                         <S.Title>Project Info.</S.Title>
                         <S.IntroductionBox>
                             <h3>소개</h3>
-                            <pre>{objInfo.description}</pre>
+                            <pre>▪ {objInfo.description1}</pre>
+                            <pre>▪ {objInfo.description2}</pre>
                         </S.IntroductionBox>
                         <S.ProcessBox>
                             <h3>제작 과정</h3>
-                            <pre>{objInfo.production}</pre>
+                            <pre>▪ {objInfo.production1}</pre>
+                            <pre>▪ {objInfo.production2}</pre>
                         </S.ProcessBox>
                         <S.ToolBox>
                             <h3>이용 장비</h3>
-                            <pre>{objInfo.tool}</pre>
+                            <pre>▪ {objInfo.tool}</pre>
                         </S.ToolBox>
                     </S.ProjectInfo>
                     <S.MakerInfo>
                         <S.Title>Maker Info.</S.Title>
-                        <pre>이름 : {objInfo.makerName}</pre>
-                        <pre>나이 : {objInfo.makerAge}</pre>
-                        <pre>소속 : {objInfo.makerMajor}</pre>
+                        <pre>▪ 이름: {objInfo.makerName}</pre>
+                        <pre>▪ 나이: {objInfo.makerAge}</pre>
+                        <pre>▪ 소속: {objInfo.makerMajor}</pre>
                     </S.MakerInfo>
                 </S.InfoBox>
             </S.ProjectContainer>
