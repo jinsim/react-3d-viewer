@@ -3,7 +3,7 @@ import './style.css';
 import * as S from './style';
 
 function Home() {
-    const boxList = document.querySelectorAll('.box');
+    const [boxList, setBoxList] = useState(document.querySelectorAll('.box'));
     const options = {
         root: null, // viewport
         rootMargin: "50px",
@@ -19,8 +19,9 @@ function Home() {
         });
     }, options);
     useEffect(() => {
+        setBoxList(document.querySelectorAll('.box'));
         boxList.forEach(el => observer.observe(el));
-    }, 3)
+    }, [])
     // 반복문을 돌려 모든 DOM에 적용
     boxList.forEach(el => observer.observe(el));
     return (
