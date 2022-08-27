@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const TeamImg = styled.img `
     width: 80vw;
-    height: 300px;
+    height: 260px;
     display: flex;
     margin: auto;
     object-fit: cover;
-    content: url('./img/aboutUs.jpeg');
+    content: url('./img/team.jpeg');
 `;
 export const TeamIntroduction = styled.div `
     height: 400px;
@@ -39,8 +39,10 @@ export const Title = styled.div `
 `;
 export const Text = styled.div `
     font-size: 18px;
-    text-indent: 15px;
     max-width: 1000px;
+    span {
+        color: #9a0025;
+    }
 `;
 
 export const AboutWrapper = styled.div `

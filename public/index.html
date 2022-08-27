@@ -1,74 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/NR_LOGO.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app"/>
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Neural Rendering</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-    <!-- Optional -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
-  <script>
-    var controller = new ScrollMagic.Controller();
-    var animateElem = [".animate_1", ".animate_2", ".animate_3", ".animate_4"];
-    var triggerElem = [".trigger_1", ".trigger_2", ".trigger_3", ".trigger_4"];
 
-    for (var i = 0; i < animateElem.length; i++) {
-      var currentAnimateElem = animateElem[i];
-      var currentTriggerElem = triggerElem[i];
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/NR_LOGO.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Neural Rendering</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <!-- Optional -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+</head>
 
-      var timeline = new TimelineMax();
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+<script>
+  //----------home의 Why 3D Model? 부분 효과----------
+  let ticking = false;
 
-      var tween_move = TweenMax.fromTo(
-        currentAnimateElem,
-        1,
-        {
-          ease: SlowMo.ease.config(0.7, 0.7, false),
-          y: 50
-        },
-        {
-          ease: SlowMo.ease.config(0.7, 0.7, false),
-          y: -50
-        }
-      );
+  function isElementUnderBottom(elem, triggerDiff) {
+    const {
+      top
+    } = elem.getBoundingClientRect();
+    const {
+      innerHeight
+    } = window;
+    return top > innerHeight + (triggerDiff || 0);
+  }
 
-      var tween_opacity = new TimelineMax();
-      tween_opacity
-        .to(currentAnimateElem, 0.3, {
-          ease: Linear.easeNone,
-          opacity: 1
-        })
-        .to(
-          currentAnimateElem,
-          0.3,
-          {
-            ease: Linear.easeNone,
-            opacity: 0
-          },
-          "+=0.4"
-        );
+  function handleScroll() {
+    ticking = false;
 
-      timeline.add(tween_move, 0).add(tween_opacity, 0);
+    const upOnScrollElems = document.querySelectorAll('.up-on-scroll');
+    upOnScrollElems.forEach(elem => {
+      if (isElementUnderBottom(elem)) {
+        elem.style.opacity = "0";
+        elem.style.transform = 'translateY(70px)';
+      } else {
+        elem.style.opacity = "1";
+        elem.style.transform = 'translateY(0px)';
+      }
+    });
 
-      var scene_main = new ScrollMagic.Scene({
-        triggerElement: currentTriggerElem,
-        duration: "900px"
-      })
-        .setTween(timeline)
-        .addTo(controller);
+    const productImg = document.querySelector('.diff-desc-image-wrap .image-wrap');
+    const productImgRect = productImg.getBoundingClientRect();
+    if (productImgRect.top < 0) {
+      // productImg.style.transform = `translateY(${-1 * productImgRect.top * 0.8 }px)`
+      productImg.style.position = 'sticky';
+      productImg.style.top = '40px';
+      productImg.style.right = '0px';
+    } else {
+      productImg.style.transform = 'none';
     }
-  </script>
+  }
+
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(handleScroll);
+    }
+    ticking = true;
+  }
+
+  window.addEventListener('scroll', requestTick);
+
+
+
+
+  //----------home의 KU Makerspace 부분 효과----------
+  // const boxList = document.querySelectorAll('.box');
+  //   const options = {
+  //       root: null, // viewport
+  //       rootMargin: "50px",
+  //       threshold: 0.83, // 50%가 viewport에 들어와 있어야 callback 실행
+  //   };
+  //   const observer = new IntersectionObserver(entries => {
+  //       entries.forEach(entry => {
+  //           if (entry.isIntersecting) {
+  //               entry.target.classList.add('active');
+  //           } else {
+  //               entry.target.classList.remove('active');
+  //           }
+  //       });
+  //   }, options);
+  //   // 반복문을 돌려 모든 DOM에 적용
+  //   if (boxList) {
+  //     const observer = new IntersectionObserver(entries => {
+  //       entries.forEach(entry => {
+  //           if (entry.isIntersecting) {
+  //             console.log('yes');
+  //             entry.target.classList.add('active');
+  //           } else {
+  //             console.log('no');
+  //             entry.target.classList.remove('active');
+  //           }
+  //       });
+  //     }, options);
+  //     console.log('box')
+  //     boxList.forEach(el => observer.observe(el));
+  //   };
+</script>
+
 </html>

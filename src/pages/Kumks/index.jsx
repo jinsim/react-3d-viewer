@@ -11,11 +11,11 @@ function Kumks() {
             <S.LeftAndRight>
                 <S.LeftContainer>
                     <img />
-                    <a type='button' href='https://kums.korea.ac.kr/front/event/list.do'><span>KU</span> 메이커스페이스에서 3D프린터 교육 신청하기</a>
+                    <a type='button' href='https://kums.korea.ac.kr/front/event/list.do'><span>KU</span>&nbsp;메이커스페이스에서 3D프린터 교육 신청하기</a>
                 </S.LeftContainer>
                 <S.RightContainer>
                     <img />
-                    <a type='button' href='https://kums.korea.ac.kr/front/machine/list.do'><span>KU</span> 메이커스페이스에서 3D프린터 사용 예약하기</a>
+                    <a type='button' href='https://kums.korea.ac.kr/front/machine/list.do'><span>KU</span>&nbsp;메이커스페이스에서 3D프린터 사용 예약하기</a>
                 </S.RightContainer>
             </S.LeftAndRight>
         </S.Container>

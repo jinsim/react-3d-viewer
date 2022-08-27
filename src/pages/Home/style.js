@@ -39,8 +39,6 @@ export const TextTwo = styled.div `
     font-family: monospace;
     color: white;
 `;
-export const ScrollContainer = styled.div `
-`;
 export const KUMKS = styled.div `
     height: 4000px;
     .animate {
@@ -68,3 +66,38 @@ export const KUMKS = styled.div `
     }
 `;
 
+export const Makerspace = styled.div `
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+export const DivOne = styled.div `
+    width: 80vw;
+    height: 400px;
+    background: green;
+`;
+export const DivTwo = styled.div `
+    width: 80vw;
+    height: 400px;
+    background-color: pink;
+`;
+
+export const BottomWrapper = styled.div `
+    width: 100%;
+    height: 250px;
+    background-color: #d9d9dd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const CompanyName = styled.div `
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 15px;
+`;
+
+export const BottomMenu = styled.div `
+    font-size: 16px;
+`;
