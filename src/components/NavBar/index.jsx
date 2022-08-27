@@ -139,7 +139,6 @@ const NavBar = () => {
           <Link to='/kumks' style={{textDecoration: 'none'}}>
             <Button
               key={pages[3]}
-              onClick={"/kumks"}
               sx={{ my: 2, color: 'white', display: 'block', padding: '6px 15px' }}
             >
               KUMKS
