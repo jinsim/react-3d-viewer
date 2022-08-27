@@ -1,0 +1,137 @@
+.up-on-scroll {
+    transition: all 0.7s;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black-bg {
+    background: black;
+    color: white;
+    padding: 20px;
+}
+
+.diff-desc-image-wrap>div {
+    display: flex;
+    width: 100%;
+}
+
+.diff-desc-image-wrap>div .desc {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    margin-right: 20px;
+    flex: 1 0 0%;
+}
+
+.diff-desc-image-wrap>div .desc>p {
+    margin: 250px 0;
+}
+
+.desc>a {
+    margin: 250px auto 400px auto;
+    cursor: pointer;
+    width: 220px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    background: #1976d2;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.desc>a:hover {
+    background: #014589;
+}
+
+.diff-desc-image-wrap .image-wrap {
+    flex: 1 0 0%;
+    max-width: 40vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+section>h2 {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    z-index: 2;
+    background: black;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    width: 100%;
+    text-decoration: underline;
+    text-decoration-thickness: from-font;
+    text-transform: uppercase;
+}
+
+h2>span {
+    color: #9a0025;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.diff-desc-image-wrap2 {
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 30rem;
+    height: 30rem;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border: #1976d2 1px solid;
+    color: white;
+    transition: .4s;
+    opacity: 0.5;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.click>span {
+    cursor: pointer;
+}
+
+.click>span:hover {
+    cursor: pointer;
+    color: #00376e;
+}
+
+.click>span>b {
+    color: #9a0025;
+}
+
+.box.active {
+    width: 60rem;
+    background: #1976d2;
+    border: #1976d2 1px solid;
+    color: #fff;
+    opacity: 1;
+}

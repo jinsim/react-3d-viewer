@@ -105,7 +105,7 @@ const NavBar = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            NEURAL RENDERING
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
