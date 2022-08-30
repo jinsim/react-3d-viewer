@@ -80,11 +80,31 @@ const NavBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+              <Link to='/about-us' style={{textDecoration: 'none'}}>
+                <MenuItem key={pages[0]} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center" color="black">About Us</Typography>
+                </MenuItem>
+              </Link>
+              <Link to='/three-d-projects' style={{textDecoration: 'none'}} >
+                <MenuItem key={pages[1]} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center" color="black">3D Projects</Typography>
+                </MenuItem>
+              </Link>
+              <Link to='/upload' style={{textDecoration: 'none'}}>
+                <MenuItem key={pages[2]} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center" color="black">Upload</Typography>
+                </MenuItem>
+              </Link>
+              <Link to='/kumks' style={{textDecoration: 'none'}}>
+                <MenuItem key={pages[3]} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center" color="black">KUMKS</Typography>
+                </MenuItem>
+              </Link>
+              {/* {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
-              ))}
+              ))} */}
             </Menu>
           </Box>
 
@@ -93,7 +113,7 @@ const NavBar = () => {
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
