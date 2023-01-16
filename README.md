@@ -4,6 +4,3 @@
 <img width="856" alt="image" src="https://user-images.githubusercontent.com/62461857/212657305-0d948074-eb95-4212-b3b8-e4bcccc30172.png">
 <img width="853" alt="image" src="https://user-images.githubusercontent.com/62461857/212657285-1a55e73d-8d2c-449c-ac2a-a4718c90fd12.png">
 <img width="856" alt="image" src="https://user-images.githubusercontent.com/62461857/212657346-9e2b1a06-1100-48ae-b7b7-734b2f46466c.png">
-
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
